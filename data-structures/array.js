@@ -119,5 +119,8 @@ class DynamicArray {
     dynamicArray._resize();
     dynamicArray._shiftItems(1);
 
-    
+
+// Example 1:
+
+
     
