@@ -98,6 +98,15 @@ class LinkedList {
         this.length++;
         return this.printList()
     }
+
+    remove(index){
+        //check params
+        const leader = this.traverseToIndex(index-1);
+        const unwantedNode = leader.next;
+        leader.next = unwantedNode.next;
+        this.length--;
+        return this.printList()
+    }
     
 }
 
@@ -106,5 +115,9 @@ myLinkedList.append(5);
 myLinkedList.append(16)
 myLinkedList.prepend(1);
 
+console.log(myLinkedList.printList());
+myLinkedList.insert(2, 99);
+console.log(myLinkedList.printList());
+myLinkedList.remove(2);
 console.log(myLinkedList.printList());
 
